@@ -1,0 +1,6 @@
+name: mia_upload
+author: Minneapolis Institute of Arts - Dave Danielson
+version: 1.0
+desc: New Upload Form and Process for Resourcespace
+config_url: /plugins/mia_upload/pages/setup.php
+default_priority: 001

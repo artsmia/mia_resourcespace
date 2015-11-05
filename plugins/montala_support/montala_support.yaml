@@ -1,0 +1,5 @@
+name: montala_support
+author: Montala Limited
+version: 1.0
+desc: Adds a check to the Team Centre to notify administrators when their hosting/support contract is coming to an end or has expired.
+config_url: /plugins/montala_support/pages/setup.php

@@ -1,0 +1,6 @@
+ref,int(11),NO,PRI,,auto_increment
+created,DATETIME,YES,,,
+owner,int(11),YES,,,
+message,MEDIUMTEXT,YES,,,
+url,text,YES,,,
+expires,DATETIME,YES,,,

@@ -1,0 +1,4 @@
+name    : elastic_search
+author  : Minneapolis Institute of Arts - Dave Danielson
+version : 0.1
+desc    : Connection to Elastic Search for indexing of resources.

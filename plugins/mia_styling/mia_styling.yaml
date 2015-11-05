@@ -1,0 +1,7 @@
+name: mia_styling
+author: Minneapolis Institute of Arts (Mia) | Dave Danielson
+version: 1.0
+desc: Theme for the Minneapolis Institute of Arts providing styling and functionality for layout, display and UX.
+info_url: http://new.artsmia.org
+config_url: /plugins/mia_styling/pages/setup.php
+default_priority: 001

@@ -1,0 +1,12 @@
+ref,int(11),NO,PRI,,auto_increment
+name,text,YES,,,
+title,text,YES,,,
+address,text,YES,,,
+city,text,YES,,,
+state,text,YES,,,
+country,text,YES,,,
+zipcode,int(10),YES,,,
+phone,varchar(20),YES,,,
+email,varchar(256),YES,,,
+URL,varchar(2083),YES,,,
+

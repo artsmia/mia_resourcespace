@@ -1,0 +1,4 @@
+name: google_forms
+author : Minneapolis Institute of Arts
+version: 1.0
+desc: Adds the ability to utilize Google Places api to populate location fields. 

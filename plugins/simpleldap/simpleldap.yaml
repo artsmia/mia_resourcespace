@@ -1,0 +1,5 @@
+name    : simpleldap
+author  : David Dwiggins
+version : 0.9
+desc    : Simpler implementation of ldap authentication, targeted at Active Directory
+config_url: /plugins/simpleldap/pages/setup.php

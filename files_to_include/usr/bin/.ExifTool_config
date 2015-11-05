@@ -1,0 +1,88 @@
+#------------------------------------------------------------------------------
+# File:         ExifTool_config  -->  ~/.ExifTool_config
+#
+# Description:  Sample user configuration file for Image::ExifTool
+#
+# Notes:        
+#               Note that unknown tags may be extracted even if they aren't
+#               defined, but tags must be defined to be written.  Also note
+#               that it is possible to override an existing tag definition
+#               with a user-defined tag.
+#
+#                   exiftool -config ExifTool_config ...
+#
+
+
+%Image::ExifTool::UserDefined = (
+
+    # new XMP namespaces (eg. xxx) must be added to the Main XMP table:
+    'Image::ExifTool::XMP::Main' => {
+        # namespace definition for examples 8 to 11
+        vrae => { # <-- must be the same as the NAMESPACE prefix
+            SubDirectory => {
+                TagTable => 'Image::ExifTool::UserDefined::vrae',
+                # (see the definition of this table below)
+            },
+        },
+        miacore => { 
+            SubDirectory => {
+                TagTable => 'Image::ExifTool::UserDefined::miacore',
+            },
+        },
+        # add more user-defined XMP namespaces here...
+    },
+);
+%Image::ExifTool::UserDefined::miacore = (
+    GROUPS => { 0 => 'XMP', 1 => 'XMP-miacore', 2 => 'Image' },
+    NAMESPACE => { 'miacore' => 'http://artsmia.org/miacore/1.0/' },
+    WRITABLE => 'string',
+
+    ObjectId => {Writable => 'string'},
+    EventId => {Writable => 'string'},
+    ExhibitionID => {Writable => 'string'},
+    SelectionApproved => {Writable => 'string'},
+    SelectionQualifier => {Writable => 'string'},
+    ResourceCategory => {Writable => 'string'},
+    MediaBinInsertionUser =>{Writable => 'string'},
+    CreditLinerequired => {Writable => 'string'},
+    MIAUserTags => {Writable => 'string'},
+    PublicAccessMedia => {Writable => 'string'},
+);
+%Image::ExifTool::UserDefined::vrae = (
+    GROUPS => { 0 => 'XMP', 1 => 'XMP-vrae', 2 => 'Image' },
+    NAMESPACE => { 'vrae' => 'http://www.vraweb.org/vracore/4.0/essential/' },
+    WRITABLE => 'string',
+
+    # Example 8.  XMP-xxx:NewXMPxxxTag1
+    # - replace "NewXMPxxxTag1" with your own tag name (eg. "MyTag")
+
+    workagent => { Writable => 'string' },
+    workculturalcontext => { Writable => 'string' },
+    workowner => {Writable => 'string'},
+    workdate => {Writable => 'string'},
+    workmeasurements => {Writable => 'string'},
+    workmate => {Writable => 'string'},
+    worktitle =>{Writable => 'string'},
+    workrefid => {Writable => 'string'},
+    sourcedepartment => {Writable => 'string'},
+    constituentid => {Writable => 'string'},
+    exhibitioncreditline => {Writable => 'string'},
+    exhibitiondates => {Writable => 'string'},
+    exhibitionid => {Writable => 'string'},
+    exhibitiontitle => {Writable => 'string'},
+    eventid => {Writable => 'string'},
+    filecreateddate => {Writable => 'string'},
+    filemodifyuser => {Writable => 'string'},
+
+    # Example 9.  XMP-xxx:NewXMPxxxTag2
+    #NewXMPxxxTag2 => { Groups => { 1 => 'Author' } },
+
+    # Example 10.  XMP-xxx:NewXMPxxxTag3
+    #NewXMPxxxTag3 => { List => 'Bag' },
+
+);
+
+#------------------------------------------------------------------------------
+1;  #end
+
+
